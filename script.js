@@ -13,7 +13,7 @@ document.getElementById("ageInputId").oninput=function(){
 	draw=null;
 	lineW=document.getElementById("ageInputId").value;
 	document.getElementById("ageOutputId").innerHTML=lineW;
-	ctx.lineWidth=lineW;
+	
 	
 }
 
@@ -32,12 +32,22 @@ high.addEventListener("click",function(){
 		high.style.background="red";
 	}
 });
-adtxt.addEventListener("click",function(){
-	var a=prompt("Enter The Text To Be Inserted")
-	canvas.appendChild(document.createTextNode(a));
-	
 
-});
+
+
+
+adtxt.addEventListener("click",function(){
+	var a=prompt("Enter text to be inserted");
+	ctx.lineWidth=lineW;
+	ctx.font=`${document.getElementById('ageInputId').value * 4}px Arial`;
+	console.log(a);
+	ctx.fillStyle=conColor.value;
+	ctx.fillText(a,500,100);
+})
+
+
+
+
 sve.addEventListener("click",function(){
 	let data=canvas.toDataURL("image/png");
 	let a=document.createElement("a");
@@ -46,6 +56,7 @@ sve.addEventListener("click",function(){
 	a.click();
 });
 shre.addEventListener("click",function(){
+
 	
 });
 ersr.addEventListener("click",function(){
@@ -86,16 +97,12 @@ window.addEventListener("mousedown",(e) => draw=true);
 window.addEventListener("mouseup",(e) => draw=false);
 
 
-
-
-
 window.addEventListener("mousemove",(e)=>{
 	if(prevX===null||prevY===null||!draw){
 		prevX=e.clientX;
 		prevY=e.clientY-40;
 		return
-	}
-	else if(high.style.background==="red"){
+	}else if(high.style.background==="red"){
 		ctx.globalAlpha=1;
 		let currentX=e.clientX;
 		let currentY=e.clientY-40;
@@ -124,5 +131,9 @@ window.addEventListener("mousemove",(e)=>{
 		prevY=currentY;
 	}
 })
+
+
+
+	
 
 
