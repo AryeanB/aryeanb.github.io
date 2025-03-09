@@ -92,13 +92,13 @@ window.addEventListener("mouseup",(e) => draw=false);
 window.addEventListener("mousemove",(e)=>{
 	if(prevX===null||prevY===null||!draw){
 		prevX=e.clientX;
-		prevY=e.clientY;
+		prevY=e.clientY-40;
 		return
 	}
 	else if(high.style.background==="red"){
 		ctx.globalAlpha=1;
 		let currentX=e.clientX;
-		let currentY=e.clientY;
+		let currentY=e.clientY-40;
 
 		ctx.beginPath();
 		ctx.moveTo(prevX,prevY);
@@ -111,13 +111,13 @@ window.addEventListener("mousemove",(e)=>{
 	else if(high.style.background==="green"){
 
 		let currentX=e.clientX;
-		let currentY=e.clientY;
+		let currentY=e.clientY-40;
 		ctx.globalAlpha=0.3;
 
 
 		ctx.beginPath();
 		ctx.moveTo(prevX,prevY);
-		ctx.lineTo(currentX,currentY,10,20)
+		ctx.lineTo(currentX,currentY)
 		ctx.stroke();
 
 		prevX=currentX;
