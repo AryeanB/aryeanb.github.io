@@ -1,57 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<title>Drawing Board</title>
-	<link type="text/css" rel="stylesheet" href="style.css"> 
-	<link type="text/css" rel="stylesheet" href="animateme.css"> 
-</head>
-<body>
-	<h1 class="animate__flipOutX">Draw Here</h1>
-	<div class="dropdown">
-  		<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    		Customise
-  		</button>
-  		<ul class="dropdown-menu">
-    		<li><label for="conColor">Choose Pen and Text color</label>
-			<input type="color" id="conColor" class="conColor" name="conColor" value="#000000"></li>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<TITLE>Landing Page</TITLE>
+	<LINK href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<LINK href="style.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY>
+	<div class="container d-flex align-items-center h-100">
+		<div class="row">
+			<header class="text-center col-12">
+				<H1 class="text-uppercase"><strong>The best drawing pad ever created</strong></H1>
+
+
+				<h6>
+<svg id="textt" width="434" height="112" viewBox="0 0 434 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="1" d="M19.1713 65.562C7.94967 65.562 -1.04833 43.8907 7.21323 34.5749C13.1019 27.9348 18.4715 25.9361 26.4151 24.6564C30.7395 23.9598 39.6956 18.8499 43.4324 24.2675C52.2012 36.9803 52.7162 54.2027 58.265 69.0627C59.0707 71.2205 58.1975 73.7508 59.0699 75.9991C59.9184 78.186 60.8638 80.1356 61.5995 82.417C62.6939 85.8108 63.9358 90.506 65.9688 93.3079C67.4708 95.3779 67.7829 98.781 69.4182 101.152C70.885 103.278 73.1249 104.748 74.8223 106.662C82.0219 114.78 86.3686 83.4344 87.9877 80.148C90.5087 75.0312 92.764 69.3569 98.336 67.9606C105.477 66.1712 109.652 68.72 111.214 76.6474C112.432 82.8268 112.511 89.0477 115.181 94.734C117.92 100.569 123.663 97.6204 127.829 97.0678C131.485 96.5828 134.038 81.079 134.038 77.2308C134.038 69.4516 134.038 61.6725 134.038 53.8933C134.038 45.7035 134.038 37.5137 134.038 29.324C134.038 21.2791 136.107 13.4868 136.107 5.5974C136.107 -2.3547 135.29 21.5629 136.165 29.4536C136.69 34.1936 138.177 37.0292 138.177 41.9652C138.177 46.1208 137.062 52.4814 138.695 56.1622C140.509 60.2534 141.832 71.3964 147.491 71.3964C155.336 71.3964 164.418 74.5407 167.957 65.562C168.849 63.2997 169.222 60.4371 169.222 57.9125C169.222 53.4564 162.785 55.0601 159.909 55.0601C150.157 55.0601 149.56 61.7633 149.56 71.6558C149.56 80.9932 155.19 83.2795 160.886 88.8996C166.427 94.3672 171.571 95.9009 179.053 95.9009C187.862 95.9009 194.058 82.1544 194.058 73.2764C194.058 62.1555 195.093 50.6821 195.093 39.3721C195.093 32.7767 192.945 27.7486 189.919 22.1282C189.182 20.7593 184.351 13.6894 183.767 18.9517C182.67 28.8527 184.509 38.485 185.722 48.0589C186.323 52.8046 188.068 57.8614 189.114 62.58C189.981 66.4916 191.018 74.9692 193.541 77.8143C197.179 81.9169 200.039 87.7328 205.959 87.7328C209.712 87.7328 217.761 89.3235 220.734 86.3066C225.373 81.5987 225.767 74.6721 228.438 67.8958C230.353 63.0364 230.277 52.0781 230.277 52.0781C230.277 52.0781 230.277 54.4551 230.277 55.6436C230.277 58.0699 230.3 55.4801 230.795 54.4767C232.287 51.4476 233.997 51.5365 236.486 50.1333C241.01 47.5831 245.07 45.7251 250.456 45.7251C251.726 45.7251 257.408 46.0259 255.918 45.4658C253.051 44.388 250.351 44.5582 247.352 44.5582C239.377 44.5582 237.852 47.0027 235.451 55.125C233.419 61.9998 232.347 68.0561 232.347 75.4805C232.347 80.6352 244.426 82.8609 247.869 83.0652C257.117 83.614 266.464 83.0652 275.58 83.0652C283.074 83.0652 293.345 84.4719 298.576 77.8791C303.973 71.078 306.058 59.2329 305.82 50.3926C305.633 43.4369 294.013 40.327 289.78 44.0396C284.648 48.5409 285.316 60.8477 286.216 67.442C287.763 78.7806 295.053 78.6169 303.233 80.6667C305.931 81.3427 309.253 80.7315 312.029 80.7315C315.914 80.7315 315.125 76.3157 316.686 73.1468C319.199 68.0464 317.268 57.7579 313.639 53.8933C310.718 50.7831 292.784 44.0278 292.367 50.1333C291.759 59.0472 295.548 72.1162 302.486 77.2308C306.621 80.28 321.215 84.3629 325.252 79.3053C333.199 69.3481 320.86 39.8907 338.36 39.8907C342.647 39.8907 346.566 46.5593 348.018 50.6519C349.462 54.7228 350.187 54.6564 351.353 51.0409C353.208 45.2869 356.238 39.8907 362.218 39.8907C370.369 39.8907 374.119 50.6271 374.119 58.8201C374.119 63.0174 374.593 66.9861 373.084 70.813C372.5 72.2941 368.909 78.9409 371.474 80.4722C378.246 84.5144 390.699 77.8541 395.391 72.5633C402.549 64.4912 404.129 53.2228 404.129 42.2245C404.129 39.5034 401.805 37.5569 399.472 37.5569C394.839 37.5569 394.711 37.7262 391.711 41.7058C389.052 45.234 390.024 59.3378 391.941 63.2283C397.687 74.89 420.953 71.2964 430 67.8958" stroke="url(#paint0_linear_2_6)" stroke-width="8" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_2_6" x1="3.64881" y1="3.71743" x2="421.794" y2="86.2263" gradientUnits="userSpaceOnUse">
+<stop offset="0.0463134" stop-color="#F221AD"/>
+<stop offset="0.249064" stop-color="#652BDB"/>
+<stop offset="0.388028" stop-color="#32C853"/>
+<stop offset="0.585222" stop-color="#C3F129"/>
+<stop offset="0.86474" stop-color="#ED0F0F"/>
+<stop offset="1" stop-color="#666666"/>
+</linearGradient>
+</defs>
+</svg></h6>
 
 
 
-			<li><label for="bgcolor">Choose Background Color</label>
-			<input type="color" class="bgcolor1" name="bgcolor" value="#642b73">
-			<input type="color" class="bgcolor2" name="bgcolor" value="#c6426e"></li>
-
-    		<li><label for="brushSize">Brush Size</label>
-			<input type="range" max="10" min="1" step="2" value="3" name="brushSize"
-			id="ageInputId" onInput="ageOutputId.value=ageInputId.value"><output id="ageOutputId">3</output></li>
-
-			
-
-
-			<li><button class="high">Highlight Mode</button></li>
-
-    		<li><button class="adtxt">Add Text</button></li>
-    		
-    		<li><button class="sve">Save</button></li>
-    		
-    		<li><button class="shre">Share</button></li>
-    		
-    		<li><button class="ersr">Eraser</button></li>
-    		
-    		<li><button class="clre">Clear</button></li>
-  		</ul>
+			</header>
+			<div class="buffer col-12"></div>
+			<section class="text-center col-12">
+				<HR>
+				<a href="index2.html"><BUTTON class="btn btn-primary btn-xl text-uppercase mybutton">Click me to start drawing</BUTTON></a>
+			</section>	
+		</div>
 	</div>
-	<canvas id="canvas1"style="border-top:1px solid #000000;"></canvas>
-	
-	
-	
-
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="script.js"></script>
-	
-</body>
-</html>
+</BODY>
+</HTML>

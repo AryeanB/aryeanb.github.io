@@ -1,67 +1,63 @@
-canvas{
-	cursor: url(pen-cursor.png),auto;
-} 
-#canvas1{
-	position:absolute;
+body,html{
 	width:100%;
-	height:540px;
-	top:100px;
-	background:linear-gradient(to right,#642b73,#c6426e);
-}
-
-h1{
-	text-align:center;
-	height:100px;
-	background-image:url(https://static.vecteezy.com/system/resources/previews/023/660/247/non_2x/sketch-scribble-smear-black-pencil-drawing-in-the-shape-of-a-rectangle-on-white-background-great-design-for-any-purposes-illustration-vector.jpg);
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-position:center;
-	margin:0px;
-	font-family:cursive;
-	color:rgb(11,245,249);
-	
-
-}
-.dropdown-toggle{
-	position:relative;
-	bottom:100px;
-	background-color:rgba(239,11,87,0.5);
-	border-color:rgba(239,11,87,0.5);
-	box-shadow: 0px 0px;
-	font-family:Brush Script MT;
-	font-size:1.6em;
-}
-
-.dropdown-toggle:hover{
-	background-color:rgba(239,11,87,0.5);
-	border-color:rgba(239,11,87,0.5);
-	box-shadow: 0px 0px;
-}
-
-.dropdown-menu{
-	background:linear-gradient(to right,rgba(190,55,200,1),rgba(21,249,25,0.5));
-	font-family:cursive;
-	border-top-right-radius:20px;
-	border-bottom-right-radius:20px;
+	height:100%;
+	font-family:'Montserrat',sans-serif;
 	color:white;
-  	
+	background:url(lat2wall.gif) no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	size:cover;
+}
+h1{
+	color:rgba(0,0,0,0.5);
+	font-size:3rem;
+	text-shadow: 2px 2px 4px rgba(31,81,255,1);
+}
+.btn{
+	font-weight:700;
+	border-radius:300px;
+
+	
+}
+.btn-primary{
+	background-color:rgba(41,40,39,0.5);
+	border-color:rgba(41,40,39,0.5);
+	
+}
+.btn-primary:hover{
+	background:linear-gradient(to right,#642b73,#c6426e);
+	border-color:rgba(41,40,39,0.5);
+	border-width:4px;
+}
+.btn-xl{
+	padding:1rem 2rem;
+	
+}
+hr{
+	border-color:rgba(49,247,214,0.8);
+	border-width:3px;
+	max-width:65px;
+}
+.buffer{
+	height:14rem;
+}
+#textt{
+	
+	margin-top:162px;
+	margin-bottom:-100px;
+	stroke-dasharray:1399;
+	animation:3s fillSvg linear;
 }
 
-.ersr,.clre,.high{
-	background-color: red;
-	border-radius:10px;
-	font-family:cursive;
-
+@keyframes fillSvg{
+	0%{
+		stroke-dashoffset:1399;
+	}
+	100%{
+		stroke-dashoffset:0;
+	}
 }
-.adtxt,.sve,.shre{
-	background-color:#bb6eff;
-	border-radius:10px;
-	font-family:cursive;
+.mybutton{
+	box-shadow:0 0 1em 0.1em #fff;
 }
-.conColor,.bgcolor1,.bgcolor2{
-	 width: 23px;
-    height: 23px; 
-    border-radius: 50%;
-    overflow: hidden;
-}
-
