@@ -3,16 +3,17 @@ body,html{
 	height:100%;
 	font-family:'Montserrat',sans-serif;
 	color:white;
-	background:url(lat2wall.gif) no-repeat center center fixed;
+	background:url(lat2wall.png) no-repeat center center fixed;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	size:cover;
+
 }
 h1{
 	color:rgba(0,0,0,0.5);
 	font-size:3rem;
-	text-shadow: 2px 2px 4px rgba(31,81,255,1);
+	text-shadow: 2px 2px 4px rgba(233,12,130,1);
 }
 .btn{
 	font-weight:700;
@@ -35,29 +36,37 @@ h1{
 	
 }
 hr{
-	border-color:rgba(49,247,214,0.8);
+	border-color:rgba(233,12,130,0.8);
 	border-width:3px;
 	max-width:65px;
 }
 .buffer{
 	height:14rem;
 }
-#textt{
-	
-	margin-top:162px;
-	margin-bottom:-100px;
-	stroke-dasharray:1399;
-	animation:3s fillSvg linear;
-}
 
-@keyframes fillSvg{
-	0%{
-		stroke-dashoffset:1399;
-	}
-	100%{
-		stroke-dashoffset:0;
-	}
-}
 .mybutton{
 	box-shadow:0 0 1em 0.1em #fff;
+	margin-top:0px;
+}
+h6{
+	margin-top:160px;
+	margin-bottom:0px;
+
+}
+svg path{
+	fill-opacity:0;
+	stroke:#fff;
+	stroke-width:1;
+	stroke-dasharray:30;	
+	stroke-dashoffset:30;
+	animation:textAnimation 2s ease-in-out 1 forwards;
+}
+@keyframes textAnimation{
+	0%{
+		stroke-dashoffset:30;
+	}
+	100%{ 
+		fill-opacity:1;
+		stroke-dashoffset:0;
+	}
 }

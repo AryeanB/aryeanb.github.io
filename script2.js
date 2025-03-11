@@ -1,17 +1,13 @@
 const canvas=document.getElementById('canvas1');
 const ctx=canvas.getContext('2d');
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+canvas.width=1150;
+canvas.height=500;
 
 var lineW=9;
 ctx.lineWidth=lineW;
 let prevX=null;
 let prevY=null;
 let draw=false;
-
-
-
-
 
 
 const high=document.getElementsByClassName("high")[0];
@@ -34,13 +30,27 @@ high.addEventListener("click",function(){
 
 
 adtxt.addEventListener("click",function(){
+	adtxt.style.background="green"
 	var a=prompt("Enter text to be inserted");
 	ctx.lineWidth=lineW;
 	ctx.font=`${document.getElementById('ageInputId').value * 4}px Arial`;
 	console.log(a);
-	ctx.fillStyle=conColor.value;
-	ctx.fillText(a,500,100);
+	window.addEventListener("mousemove",(e)=>{
+	if(prevX===null||prevY===null||!draw){
+		prevX=e.offsetX;
+		prevY=e.offsetY+25;
+		return}
+
+	else if(adtxt.style.background==="green"){
+		ctx.fillStyle=conColor.value;
+		ctx.fillText(a,prevX,prevY);
+		adtxt.style.background="red"
+	}
 })
+});
+
+
+	
 
 
 
@@ -91,21 +101,19 @@ document.getElementById("ageInputId").oninput=function(){
 	
 }	
 
-
 window.addEventListener("mousemove",(e)=>{
 	if(prevX===null||prevY===null||!draw){
-		prevX=e.clientX;
-		prevY=e.clientY;
+		prevX=e.offsetX;
+		prevY=e.offsetY+25;
 		return}
+
 	
-
-
-
+	
 	else if(high.style.background==="red" && ersr.style.background==="red"){
 
 		ctx.globalAlpha=1;
-		let currentX=e.clientX-100;
-		let currentY=e.clientY;
+		const currentX=e.offsetX;
+		const currentY=e.offsetY+25;
 
 		
 
@@ -119,8 +127,8 @@ window.addEventListener("mousemove",(e)=>{
 	}
 	else if(high.style.background==="green" && ersr.style.background==="red"){
 
-		let currentX=e.clientX-100;
-		let currentY=e.clientY;
+		let currentX=e.offsetX;
+		let currentY=e.offsetY+25;
 		ctx.globalAlpha=0.3;
 
 
@@ -132,27 +140,10 @@ window.addEventListener("mousemove",(e)=>{
 		prevX=currentX;
 		prevY=currentY;
 	}
-})
-
-ersr.addEventListener("click",function(){
-	if(ersr.style.background==="red"){
-		ersr.style.background="green";
-	}else{
-		ersr.style.background="red";
-	}
-});
-
-
-window.addEventListener("mousemove",(e)=>{
-	if(prevX===null||prevY===null||!draw){
-		prevX=e.clientX;
-		prevY=e.clientY;
-		return}
-	
 	else if(ersr.style.background==="green"){
 		ctx.globalAlpha=1;
-		let currentX=e.clientX-100;
-		let currentY=e.clientY;
+		let currentX=e.offsetX;
+		let currentY=e.offsetY+25;
 
 		ctx.beginPath();
 		ctx.moveTo(prevX,prevY);
@@ -163,6 +154,20 @@ window.addEventListener("mousemove",(e)=>{
 		prevY=currentY;
 	}
 })
+
+
+
+
+
+
+ersr.addEventListener("click",function(){
+	if(ersr.style.background==="red"){
+		ersr.style.background="green";
+	}else{
+		ersr.style.background="red";
+	}
+});
+
 
 
 
