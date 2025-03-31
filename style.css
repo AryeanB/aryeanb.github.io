@@ -3,70 +3,69 @@ body,html{
 	height:100%;
 	font-family:'Montserrat',sans-serif;
 	color:white;
-	background:url(lat2wall.png) no-repeat center center fixed;
+	background:no-repeat center center fixed;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	size:cover;
-
 }
 h1{
-	color:rgba(0,0,0,0.5);
 	font-size:3rem;
-	text-shadow: 2px 2px 4px rgba(233,12,130,1);
+	color:purple;
+  	text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff;
+    border-right: .10em solid grey;
+    letter-spacing: .15em;
+	overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: grey; }
 }
 .btn{
 	font-weight:700;
 	border-radius:300px;
-
-	
+	background:url(bgbtn.png) no-repeat center center fixed;
 }
 .btn-primary{
-	background-color:rgba(41,40,39,0.5);
-	border-color:rgba(41,40,39,0.5);
-	
+	background-color:grey;
+	border-color:grey;
 }
 .btn-primary:hover{
-	background:linear-gradient(to right,#642b73,#c6426e);
-	border-color:rgba(41,40,39,0.5);
+	background-color:grey;
+	border-color:grey;
 	border-width:4px;
 }
 .btn-xl{
 	padding:1rem 2rem;
-	
 }
 hr{
-	border-color:rgba(233,12,130,0.8);
+	border-color:grey;
 	border-width:3px;
 	max-width:65px;
 }
 .buffer{
 	height:14rem;
 }
-
-.mybutton{
-	box-shadow:0 0 1em 0.1em #fff;
-	margin-top:0px;
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
-h6{
-	margin-top:160px;
-	margin-bottom:0px;
-
-}
-svg path{
-	fill-opacity:0;
-	stroke:#fff;
-	stroke-width:1;
-	stroke-dasharray:30;	
-	stroke-dashoffset:30;
-	animation:textAnimation 2s ease-in-out 1 forwards;
-}
-@keyframes textAnimation{
-	0%{
-		stroke-dashoffset:30;
-	}
-	100%{ 
-		fill-opacity:1;
-		stroke-dashoffset:0;
-	}
+.city{
+	background:rgba(0,0,0,0);
+	border:0;
 }
